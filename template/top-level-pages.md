@@ -1,2 +1,3 @@
 - [Home](index.html)
 - [Contact](contact.html)
+- [Blog](blog.html)

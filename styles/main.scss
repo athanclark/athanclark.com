@@ -4,9 +4,15 @@ main {
     & > section.grid {
         grid-template-columns: minmax(4ch, max-content) auto;
 
-        & > nav > ul {
-            align-items: normal;
-            flex-direction: column;
+        & > nav {
+            position: sticky;
+            top: 0;
+            height: min-content;
+
+            & > ul {
+                align-items: normal;
+                flex-direction: column;
+            }
         }
 
         & > article {
@@ -19,4 +25,10 @@ main {
     & > footer {
         margin-top: var(--block-spacing-vertical);
     }
+}
+
+img.personal {
+    max-width: 12em;
+    float: right;
+    border-radius: 1em;
 }

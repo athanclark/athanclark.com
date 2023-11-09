@@ -5,7 +5,9 @@ rm -r docs/
 mkdir -p build/
 mkdir -p build/incomplete/
 mkdir -p build/stage1/
+mkdir -p build/stage1/blog/
 mkdir -p build/stage2/
+mkdir -p build/stage2/blog/
 mkdir -p docs/
 
 generatepages() {
@@ -40,7 +42,17 @@ generatepages() {
 
         # build the page's body
         # FIXME table of contents should only exist for blog posts
-        pandoc --toc -s --template template/pandoc.html pages/$page.md -o build/stage1/$page.html
+        # pandoc --toc -s --template template/pandoc.html pages/$page.md -o build/stage1/$page.html
+        pandoc pages/$page.md -o build/stage1/$page.html
+
+        if [ $page = "blog" ]; then
+            for post in pages/blog/*.md; do
+                # TODO generate each full page
+                # TODO create a latest-posts widgit, append to blog page
+                echo "OK"
+            done
+        fi
+
         ltext --raw $title --raw $desc \
               "template/wrapper.html $title $desc build/stage1/$page.html" \
               > build/stage2/$page.html
