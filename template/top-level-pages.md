@@ -1,0 +1,2 @@
+- [Home](index.html)
+- [Contact](contact.html)

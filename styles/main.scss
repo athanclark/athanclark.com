@@ -1,0 +1,22 @@
+@import "../node_modules/@picocss/pico/scss/pico.scss";
+
+main {
+    & > section.grid {
+        grid-template-columns: minmax(4ch, max-content) auto;
+
+        & > nav > ul {
+            align-items: normal;
+            flex-direction: column;
+        }
+
+        & > article {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: var(--block-spacing-horizontal) var(--block-spacing-horizontal);
+        }
+    }
+
+    & > footer {
+        margin-top: var(--block-spacing-vertical);
+    }
+}
