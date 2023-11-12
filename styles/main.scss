@@ -1,8 +1,14 @@
 @import "../node_modules/@picocss/pico/scss/pico.scss";
 
+@mixin selected-page {
+    background: var(--card-background-color);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
 main {
     & > section.grid {
         grid-template-columns: minmax(4ch, max-content) auto;
+        grid-column-gap: 0;
 
         & > nav {
             position: sticky;
@@ -12,6 +18,24 @@ main {
             & > ul {
                 align-items: normal;
                 flex-direction: column;
+                margin-left: 0;
+                margin-right: calc(var(--border-radius) * -1);
+
+                & > li {
+                    padding-right: calc(var(--border-radius) + var(--nav-element-spacing-horizontal));
+                }
+            }
+
+            &.index > ul > li.index {
+                @include selected-page;
+            }
+
+            &.contact > ul > li.contact {
+                @include selected-page;
+            }
+
+            &.blog > ul > li.blog {
+                @include selected-page;
             }
         }
 

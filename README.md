@@ -33,3 +33,13 @@ changes:
 ```bash
 watchexec -w pages -w template -w styles -w build.sh ./build.sh
 ```
+## Serve
+
+You can host a server by opening a new nix shell, and running `httplz`:
+
+```bash
+nix-shell
+cd docs/
+httplz
+```
+

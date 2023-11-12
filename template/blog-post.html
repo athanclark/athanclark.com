@@ -1,0 +1,32 @@
+<h1>$title$</h1>
+<dl>
+    <dt>
+        Written by:
+    </dt>
+    <dd>
+        $author$
+    </dd>
+    <dt>
+        Date:
+    </dt>
+    <dd>
+        $date$
+    </dd>
+    <dt>
+        Keywords:
+    </dt>
+    <dd>
+        $for(keywords)$$keywords$$sep$, $endfor$
+    </dd>
+</dl>
+$if(abstract)$
+<div>
+    <h3>$abstract-title$</h3>
+    $abstract$
+</div>
+$endif$
+<h2>Table of Contents</h2>
+<nav>
+$toc$
+</nav>
+$body$

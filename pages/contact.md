@@ -1,7 +1,7 @@
 Contact
 ========
 
-<img src="../images/me.jpg" class="personal" />
+<img src="/images/me.jpg" class="personal" />
 
 Here is some contact info:
 

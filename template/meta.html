@@ -1,0 +1,14 @@
+$if(title)$
+<title>$title$ - athanclark.com</title>
+$else$
+<title>athanclark.com</title>
+$endif$
+$if(abstract)$
+<meta name="description" content="$abstract$" />
+$endif$
+$if(author)$
+<meta name="author" content="$author$" />
+$endif$
+$if(keywords)$
+<meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
