@@ -205,5 +205,17 @@ generatepages
 sass -q styles/main.scss docs/main.css
 
 css-html-js-minify --quiet --overwrite docs/
+css-html-js-minify --quiet --hash docs/
+
+# FIXME make ltext work within lines
+cachebustcss() {
+    local css
+    cd docs/
+    css=$(ls main-*.min.css)
+    cd ../
+    sed -i "s/STYLES/$css/g" docs/index.html
+}
+
+cachebustcss
 
 cp -r images docs/images

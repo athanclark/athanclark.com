@@ -36,6 +36,7 @@ main {
                 flex-direction: column;
                 margin-left: 0;
                 margin-right: calc(var(--border-radius) * -1);
+                margin-top: 0;
 
                 & > li {
                     padding-right: calc(var(--border-radius) + var(--nav-element-spacing-horizontal));
