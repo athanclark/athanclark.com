@@ -1,23 +1,27 @@
 <h1>$title$</h1>
 <dl>
     <dt>
-        Written by:
-    </dt>
-    <dd>
-        $author$
-    </dd>
-    <dt>
-        Date:
-    </dt>
-    <dd>
-        <time datetime="$date$">$date$</time>
-    </dd>
-    <dt>
         Keywords:
     </dt>
     <dd>
         $for(keywords)$$keywords$$sep$, $endfor$
     </dd>
+$if(date)$
+    <dt>
+        Development Date:
+    </dt>
+    <dd>
+        $date$
+    </dd>
+$endif$
+$if(website)$
+    <dt>
+        Website:
+    </dt>
+    <dd>
+        <a href="$website$" target="__blank">$website$</a>
+    </dd>
+$endif$
 </dl>
 <hr />
 $if(abstract)$
@@ -26,8 +30,4 @@ $if(abstract)$
     $abstract$
 </div>
 $endif$
-<h2>Table of Contents</h2>
-<nav>
-$toc$
-</nav>
 $body$

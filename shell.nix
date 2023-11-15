@@ -8,5 +8,6 @@
       watchexec
       nodejs_20
       httplz
+      shellcheck
     ];
 }

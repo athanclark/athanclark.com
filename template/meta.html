@@ -1,8 +1,6 @@
-$if(title)$
-<title>$title$ - athanclark.com</title>
-$else$
-<title>athanclark.com</title>
-$endif$
+<title>
+    $if(title)$$title$ - $endif$$if(title-suffix)$$title-suffix$ - $endif$athanclark.com
+</title>
 $if(abstract)$
 <meta name="description" content="$abstract$" />
 $endif$

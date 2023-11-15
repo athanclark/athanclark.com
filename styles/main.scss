@@ -7,13 +7,29 @@
 
 main {
     & > section.grid {
-        grid-template-columns: minmax(4ch, max-content) auto;
-        grid-column-gap: 0;
+        @media (min-width: 992px) {
+            grid-template-columns: minmax(4ch, max-content) auto;
+            grid-column-gap: 0;
+        }
 
         & > nav {
-            position: sticky;
-            top: 0;
-            height: min-content;
+            & > ul {
+                display: none;
+            }
+            & > p {
+                width: 100%;
+            }
+            @media (min-width: 992px) {
+                position: sticky;
+                top: 0;
+                height: min-content;
+                & > ul {
+                    display: flex;
+                }
+                & > p {
+                    display: none;
+                }
+            }
 
             & > ul {
                 align-items: normal;
@@ -37,6 +53,10 @@ main {
             &.blog > ul > li.blog {
                 @include selected-page;
             }
+
+            &.portfolio > ul > li.portfolio {
+                @include selected-page;
+            }
         }
 
         & > article {
@@ -52,7 +72,9 @@ main {
 }
 
 img.personal {
-    max-width: 12em;
-    float: right;
+    @media (min-width: 992px) {
+        max-width: 12em;
+        float: right;
+    }
     border-radius: 1em;
 }
