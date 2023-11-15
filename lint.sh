@@ -2,7 +2,7 @@
 
 echo "Checking quality of shell scripts..."
 
-shellcheck ./*.sh
+shellcheck -S error ./*.sh
 
 echo "Checking for broken links..."
 

@@ -9,5 +9,6 @@
       nodejs_20
       httplz
       shellcheck
+      linkchecker
     ];
 }
