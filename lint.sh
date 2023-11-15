@@ -6,4 +6,4 @@ shellcheck -S error ./*.sh
 
 echo "Checking for broken links..."
 
-linkchecker --ignore-url=^mailto: http://localhost:8000/
+linkchecker -f .linkcheckerrc docs/

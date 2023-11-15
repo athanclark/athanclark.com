@@ -213,7 +213,8 @@ cachebustcss() {
     cd docs/
     css=$(ls main-*.min.css)
     cd ../
-    sed -i "s/STYLES/$css/g" docs/index.html
+    sed -i "s/STYLES/\/$css/g" docs/*.html
+    sed -i "s/STYLES/\/$css/g" docs/**/*.html
 }
 
 cachebustcss

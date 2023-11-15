@@ -1,0 +1,5 @@
+[settings]
+localwebroot=docs/
+
+[filtering]
+ignore=^mailto:
