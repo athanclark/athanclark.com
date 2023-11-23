@@ -38,6 +38,7 @@ generateblogposts() {
         pandoc -s --template template/desc.html \
                 pages/blog/"$post".md -o build/descs/blog/"$post".desc -t html
         desc=build/descs/blog/$post.desc
+        sed -i -E 's/^(.+)$/  \1/' $desc
         actualdesc=$(cat "$desc")
         pandoc -s --template template/date.html \
                 pages/blog/"$post".md -o build/dates/blog/"$post".date -t html
@@ -59,13 +60,20 @@ generateblogposts() {
                 "template/wrapper.html $meta build/idents/blog build/stage1/blog/$post.html" \
                 > build/stage2/blog/"$post".html
 
-        echo -e "$actualdate\t$actualtitle\t/blog/$post.html\t$actualdesc" >> build/stage1/blog-posts.md
+        echo -e "$actualdate\t/blog/$post.html\t$actualtitle\t$desc" >> build/stage1/blog-posts.md
     done
 
     sort -r build/stage1/blog-posts.md > build/stage1/blog-posts.md.tmp
     echo "## Blog Posts" | cat build/stage1/blog-posts.md.tmp > build/stage1/blog-posts.md
     rm build/stage1/blog-posts.md.tmp
-    sed -i -E 's/^(.+)\t(.+)\t(.+)\t(.+)$/- [\2](\3) - \1\n  <br \/>\n  \4/' build/stage1/blog-posts.md
+    # \1 is date, \2 is blog post link, \3 is title, \4 is description
+    sed -i -E 's/^(.+)\t(.+)\t(.+)\t(.+)$/- [\3](\2) - \1\n  <br \/>\n  \4/' build/stage1/blog-posts.md
+    grep -E '^  .+\.desc$' build/stage1/blog-posts.md | while read desc
+    do
+        post=$(basename $desc .desc)
+        sed -i -E -e "/^  (.+)$post\.desc/{r $desc" -e 'd}' build/stage1/blog-posts.md
+    done
+    sed -i -E -e '/^  (.+)\.desc$/{ r \1.desc' -e 'd}' build/stage1/blog-posts.md
     pandoc build/stage1/blog-posts.md -o build/stage1/blog-posts.html
     cat build/stage1/blog.html build/stage1/blog-posts.html > build/stage1/blog-tmp.html
     mv build/stage1/blog-tmp.html build/stage1/blog.html

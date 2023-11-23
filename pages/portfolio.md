@@ -35,6 +35,9 @@ Libraries
 
 Here are some libraries I've developed.
 
+- [IntSet.js](/portfolio/intset.html)
+  <br />
+  A set implementation for `bigint`s.
 - [Shpadoinkle](/portfolio/shpadoinkle.html)
   <br />
   A web application framework for Haskell and GHCJS.
