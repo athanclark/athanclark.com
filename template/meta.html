@@ -10,3 +10,6 @@ $endif$
 $if(keywords)$
 <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
 $endif$
+$for(scripts)$
+<script defer src="$scripts$"></script>
+$endfor$

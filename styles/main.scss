@@ -1,4 +1,7 @@
 @import "../node_modules/@picocss/pico/scss/pico.scss";
+@import "./highlighting.scss";
+@import "./math.scss";
+
 
 @mixin selected-page {
     background: var(--card-background-color);
@@ -64,6 +67,20 @@ main {
             margin-top: 0;
             margin-bottom: 0;
             padding: var(--block-spacing-horizontal) var(--block-spacing-horizontal);
+
+            & > hr {
+                margin-top: var(--block-spacing-vertical);
+                margin-bottom: var(--block-spacing-vertical);
+            }
+
+            table {
+                border: calc(var(--border-width) / 2) solid var(--table-border-color);
+                th, td {
+                    &:not(:last-child) {
+                        border-right: calc(var(--border-width) / 2) solid var(--table-border-color);
+                    }
+                }
+            }
         }
     }
 
@@ -78,4 +95,38 @@ img.personal {
         float: right;
     }
     border-radius: 1em;
+}
+
+article {
+    div[role="navigation"] {
+        & > ul > li {
+            list-style: decimal;
+            & > ul > li {
+                list-style: upper-roman;
+                & > ul > li {
+                    list-style: lower-roman;
+                    & > ul > li {
+                        list-style: upper-alpha;
+                        & > ul > li {
+                            list-style: lower-alpha;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .figure {
+        margin-top: var(--block-spacing-vertical);
+        margin-bottom: var(--block-spacing-vertical);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .plotly {
+            width: fit-content;
+        }
+        &:not(.js-plotly-plot) {
+            height: 500px;
+        }
+    }
 }

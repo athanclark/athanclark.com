@@ -1,0 +1,9 @@
+.math {
+    font-family: 'Latin Modern';
+
+    &.display {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+}

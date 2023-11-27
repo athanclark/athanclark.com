@@ -12,6 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@picocss/pico": "^1.5.10"
+    "@picocss/pico": "../pico/"
   }
 }

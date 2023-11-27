@@ -31,23 +31,25 @@ generateblogposts() {
     for post in pages/blog/*.md; do
         # TODO create a latest-posts widgit, append to blog page
         post=$(basename "$post" .md)
+        [[ -e pages/blog/$post ]] && cp -r pages/blog/$post docs/blog/
         pandoc -s --template template/title.html \
-                pages/blog/"$post".md -o build/titles/blog/"$post".title -t html
+               pages/blog/"$post".md -o build/titles/blog/"$post".title -t html
         title=build/titles/blog/$post.title
         actualtitle=$(cat "$title")
         pandoc -s --template template/desc.html \
-                pages/blog/"$post".md -o build/descs/blog/"$post".desc -t html
+               pages/blog/"$post".md -o build/descs/blog/"$post".desc -t html
         desc=build/descs/blog/$post.desc
         sed -i -E 's/^(.+)$/  \1/' $desc
         actualdesc=$(cat "$desc")
         pandoc -s --template template/date.html \
-                pages/blog/"$post".md -o build/dates/blog/"$post".date -t html
+               pages/blog/"$post".md -o build/dates/blog/"$post".date -t html
         date=build/dates/blog/$post.date
         actualdate=$(cat "$date")
         meta=build/metas/blog/$post.html
 
         # Build the actual blog post's page
         pandoc --toc -s --template template/blog-post.html pages/blog/"$post".md \
+               --from markdown+grid_tables \
                 -o build/stage1/blog/"$post".html
 
         # Build the blog post's meta
@@ -212,7 +214,10 @@ generatepages
 
 sass -q styles/main.scss docs/main.css
 
-css-html-js-minify --quiet --overwrite docs/
+for html in docs/{*.html,**/*.html}
+do
+    css-html-js-minify --quiet --overwrite $html
+done
 css-html-js-minify --quiet --hash docs/
 
 # FIXME make ltext work within lines
