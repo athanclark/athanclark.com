@@ -67,7 +67,7 @@ $$
 m = 2^{x_1} \cup 2^{x_2} \cup \ldots \cup 2^{x_q}
 $$
 
-Where $m$ is the whole integer that represents the set, and $\cup is the bitwise or operator `|`.
+Where $m$ is the whole integer that represents the set, and $\cup$ is the bitwise or operator `|`.
 These implications are expanded on the other operators as well:
 
 | Bitwise Operator | Set Operator |
@@ -301,7 +301,7 @@ There are a few key points to receive from this investigation:
 2. For values generated up to $2^12$, I recommend a default $n$ value of $2^8$, due to the
    clef in the [Reduced Operations Per Second](#reduced-ops-per-sec) at $x = 8, y = 12$.
 3. For values generated up to $2^16$, I recommend an $n$ value of $2^12$.
-$. For larger values, maybe consider a different library.
+4. For larger values, maybe consider a different library.
 
 ## Considerations
 

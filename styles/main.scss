@@ -21,6 +21,9 @@ main {
             }
             & > p {
                 width: 100%;
+                & > select {
+                    background-image: url("/images/dropdown.svg");
+                }
             }
             @media (min-width: 992px) {
                 position: sticky;

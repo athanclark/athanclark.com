@@ -2665,7 +2665,7 @@ textarea,
 }
 
 .math {
-  font-family: "Latin Modern";
+  font-family: "Latin Modern", math, serif;
 }
 .math.display {
   display: inline-block;
@@ -2684,6 +2684,9 @@ main > section.grid > nav > ul {
 }
 main > section.grid > nav > p {
   width: 100%;
+}
+main > section.grid > nav > p > select {
+  background-image: url("/images/dropdown.svg");
 }
 @media (min-width: 992px) {
   main > section.grid > nav {

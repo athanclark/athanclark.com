@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="STYLES" />
 
         <script type="text/javascript">
-         window.onload = function() {
+         document.addEventListener('DOMContentLoaded', function() {
              const mobileNav = document.getElementById('page-select');
              const currentPage = mobileNav.parentElement.parentElement.classList[0];
              for (const navItem of mobileNav.children) {
@@ -23,7 +23,7 @@
              mobileNav.onchange = function(e) {
                  window.location.pathname = `/${e.target.value}.html`;
              };
-         };
+         });
         </script>
     </head>
     <body>

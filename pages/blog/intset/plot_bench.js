@@ -1,4 +1,4 @@
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
     d3.csv(
         'https://raw.githubusercontent.com/athanclark/intset.js/main/bench/results.csv',
         function(err, rows){
@@ -162,7 +162,7 @@ window.onload = function() {
             })();
         }
     );
-};
+});
 
 function mkX() {
     let result = [];
