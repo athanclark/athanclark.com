@@ -79,6 +79,8 @@ jobs:
         with:
           name: build-result
           path: './docs/'
+      - name: List Everything
+        run: ls -R
       - name: Untar Archive
         run: tar -xvf ./docs/archive.tar
       - name: List Docs/
