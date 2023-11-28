@@ -82,7 +82,7 @@ jobs:
       - name: List Everything
         run: ls -R
       - name: Untar Archive
-        run: tar -xvf ./docs/archive.tar
+        run: tar -xvf ./docs/artifact.tar
       - name: List Docs/
         run: ls -R docs/
       - name: Use Cachix
