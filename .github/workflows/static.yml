@@ -82,8 +82,6 @@ jobs:
       - name: Untar Archive & Remove
         run: tar -xvf ./artifact.tar && rm ./artifact.tar
         working-directory: ./docs
-      - name: List Docs
-        run: ls -R docs/
       - name: Use Cachix
         uses: cachix/install-nix-action@v22
         with:
