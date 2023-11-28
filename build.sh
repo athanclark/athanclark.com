@@ -214,11 +214,28 @@ generatepages
 
 sass -q styles/main.scss docs/main.css
 
-for html in docs/{*.html,**/*.html}
+for html in $(find docs/ -name "*.html")
 do
-    css-html-js-minify --quiet --overwrite $html
+    npx html-minifier \
+        --collapse-inline-tag-whitespace \
+        --collapse-whitespace \
+        --conservative-collapse \
+        --remove-comments \
+        --remove-tag-whitespace \
+        --remove-style-link-type-attributes \
+        --remove-script-type-attributes \
+        --remove-tag-whitespace \
+        --minify-css \
+        --minify-js \
+        -o $html \
+        $html
 done
-css-html-js-minify --quiet --hash docs/
+for js in $(find docs/ -name "*.js")
+do
+    npx uglify-js $js > $js.tmp
+    mv $js.tmp $js
+done
+css-html-js-minify --quiet --hash docs/main.css
 
 # FIXME make ltext work within lines
 cachebustcss() {

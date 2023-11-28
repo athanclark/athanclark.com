@@ -119,7 +119,7 @@ article {
         }
     }
 
-    .figure {
+    div.figure {
         margin-top: var(--block-spacing-vertical);
         margin-bottom: var(--block-spacing-vertical);
         display: flex;
@@ -131,5 +131,14 @@ article {
         &:not(.js-plotly-plot) {
             height: 500px;
         }
+    }
+
+    img.figure {
+        @media (min-width: 992px) {
+            max-height: 12em;
+            width: 100%;
+        }
+        margin-top: var(--block-spacing-vertical);
+        margin-bottom: var(--block-spacing-vertical);
     }
 }

@@ -20,6 +20,9 @@ they are considered finished products.
 - [Wage Calculator](/portfolio/wagecalculator.html)
   <br />
   A simple serverless web application for comparing wage rates.
+- [athanclark.com](/portfolio/athanclark.html)
+  <br />
+  This website.
 
 Command-Line Tools
 ----------------------
@@ -29,6 +32,9 @@ These are some command-line tools I've developed over the years.
 - [λtext](/portfolio/ltext.html)
   <br />
   A templating engine for text files, inspired by functional programming.
+- [ws](/portfolio/ws.html)
+  <br />
+  An interactive `cURL`-like CLI for interacting with WebSocket servers.
 
 Libraries
 -----------
