@@ -16,6 +16,9 @@ main {
         }
 
         & > nav {
+            a {
+                text-decoration: none !important;
+            }
             & > ul {
                 display: none;
             }
@@ -141,4 +144,8 @@ article {
         margin-top: var(--block-spacing-vertical);
         margin-bottom: var(--block-spacing-vertical);
     }
+}
+
+a {
+    text-decoration: underline !important;
 }

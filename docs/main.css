@@ -125,7 +125,7 @@ dialog > article {
 }
 
 a {
-  --text-decoration: underline;
+  --text-decoration: none;
 }
 a.secondary, a.contrast {
   --text-decoration: underline;
@@ -205,7 +205,6 @@ kbd {
 [data-theme=light],
 :root:not([data-theme=dark]) {
   --background-color: #fff;
-  --body-background: #fff;
   --color: hsl(205, 20%, 32%);
   --h1-color: hsl(205, 30%, 15%);
   --h2-color: #24333e;
@@ -276,13 +275,13 @@ kbd {
   --card-background-color: var(--background-color);
   --card-border-color: var(--muted-border-color);
   --card-box-shadow:
-    0.0145rem 0.029rem 0.174rem rgba(27, 40, 50, 0.0283),
-    0.0335rem 0.067rem 0.402rem rgba(27, 40, 50, 0.04),
-    0.0625rem 0.125rem 0.75rem rgba(27, 40, 50, 0.05),
-    0.1125rem 0.225rem 1.35rem rgba(27, 40, 50, 0.06),
-    0.2085rem 0.417rem 2.502rem rgba(27, 40, 50, 0.0717),
-    0.5rem 1rem 6rem rgba(27, 40, 50, 0.1),
-    0 0 0 0.0625rem rgba(27, 40, 50, 0.025);
+    0.0145rem 0.029rem 0.174rem rgba(27, 40, 50, 0.01698),
+    0.0335rem 0.067rem 0.402rem rgba(27, 40, 50, 0.024),
+    0.0625rem 0.125rem 0.75rem rgba(27, 40, 50, 0.03),
+    0.1125rem 0.225rem 1.35rem rgba(27, 40, 50, 0.036),
+    0.2085rem 0.417rem 2.502rem rgba(27, 40, 50, 0.04302),
+    0.5rem 1rem 6rem rgba(27, 40, 50, 0.06),
+    0 0 0 0.0625rem rgba(27, 40, 50, 0.015);
   --card-sectionning-background-color: #fbfbfc;
   --dropdown-background-color: #fbfbfc;
   --dropdown-border-color: #e1e6eb;
@@ -312,7 +311,6 @@ kbd {
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     --background-color: #11191f;
-    --body-background: var(--background-color);
     --color: hsl(205, 16%, 77%);
     --h1-color: hsl(205, 20%, 94%);
     --h2-color: #e1e6eb;
@@ -381,17 +379,17 @@ kbd {
     --accordion-active-summary-color: var(--primary);
     --accordion-close-summary-color: var(--color);
     --accordion-open-summary-color: var(--muted-color);
-    --card-background-color: hsl(205, 30%, 15%);
+    --card-background-color: #141e26;
     --card-border-color: var(--card-background-color);
     --card-box-shadow:
-      0.0145rem 0.029rem 0.058rem rgba(27, 40, 50, 0.01698),
-      0.0335rem 0.067rem 0.134rem rgba(27, 40, 50, 0.024),
-      0.0625rem 0.125rem 0.25rem rgba(27, 40, 50, 0.03),
-      0.1125rem 0.225rem 0.45rem rgba(27, 40, 50, 0.036),
-      0.2085rem 0.417rem 0.834rem rgba(27, 40, 50, 0.04302),
-      0.5rem 1rem 2rem rgba(27, 40, 50, 0.06),
-      0 0 0 0.0625rem rgba(27, 40, 50, 0.015);
-    --card-sectionning-background-color: #1b2832;
+      0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
+      0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),
+      0.0625rem 0.125rem 0.75rem rgba(0, 0, 0, 0.03),
+      0.1125rem 0.225rem 1.35rem rgba(0, 0, 0, 0.036),
+      0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),
+      0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),
+      0 0 0 0.0625rem rgba(0, 0, 0, 0.015);
+    --card-sectionning-background-color: #18232c;
     --dropdown-background-color: hsl(205, 30%, 15%);
     --dropdown-border-color: #24333e;
     --dropdown-box-shadow: var(--card-box-shadow);
@@ -419,7 +417,6 @@ kbd {
 }
 [data-theme=dark] {
   --background-color: #11191f;
-  --body-background: var(--background-color);
   --color: hsl(205, 16%, 77%);
   --h1-color: hsl(205, 20%, 94%);
   --h2-color: #e1e6eb;
@@ -488,17 +485,17 @@ kbd {
   --accordion-active-summary-color: var(--primary);
   --accordion-close-summary-color: var(--color);
   --accordion-open-summary-color: var(--muted-color);
-  --card-background-color: hsl(205, 30%, 15%);
+  --card-background-color: #141e26;
   --card-border-color: var(--card-background-color);
   --card-box-shadow:
-    0.0145rem 0.029rem 0.058rem rgba(27, 40, 50, 0.01698),
-    0.0335rem 0.067rem 0.134rem rgba(27, 40, 50, 0.024),
-    0.0625rem 0.125rem 0.25rem rgba(27, 40, 50, 0.03),
-    0.1125rem 0.225rem 0.45rem rgba(27, 40, 50, 0.036),
-    0.2085rem 0.417rem 0.834rem rgba(27, 40, 50, 0.04302),
-    0.5rem 1rem 2rem rgba(27, 40, 50, 0.06),
-    0 0 0 0.0625rem rgba(27, 40, 50, 0.015);
-  --card-sectionning-background-color: #1b2832;
+    0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
+    0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),
+    0.0625rem 0.125rem 0.75rem rgba(0, 0, 0, 0.03),
+    0.1125rem 0.225rem 1.35rem rgba(0, 0, 0, 0.036),
+    0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),
+    0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),
+    0 0 0 0.0625rem rgba(0, 0, 0, 0.015);
+  --card-sectionning-background-color: #18232c;
   --dropdown-background-color: hsl(205, 30%, 15%);
   --dropdown-border-color: #24333e;
   --dropdown-box-shadow: var(--card-box-shadow);
@@ -704,7 +701,7 @@ ul {
   font-size: var(--font-size);
 }
 
-a:not(#github-corner),
+a,
 [role=link] {
   --color: var(--primary);
   --background-color: transparent;
@@ -714,36 +711,36 @@ a:not(#github-corner),
   text-decoration: var(--text-decoration);
   transition: background-color var(--transition), color var(--transition), text-decoration var(--transition), box-shadow var(--transition);
 }
-a:not(#github-corner):is([aria-current], :hover, :active, :focus),
+a:is([aria-current], :hover, :active, :focus),
 [role=link]:is([aria-current], :hover, :active, :focus) {
   --color: var(--primary-hover);
   --text-decoration: underline;
 }
-a:not(#github-corner):focus,
+a:focus,
 [role=link]:focus {
   --background-color: var(--primary-focus);
 }
-a:not(#github-corner).secondary,
+a.secondary,
 [role=link].secondary {
   --color: var(--secondary);
 }
-a:not(#github-corner).secondary:is([aria-current], :hover, :active, :focus),
+a.secondary:is([aria-current], :hover, :active, :focus),
 [role=link].secondary:is([aria-current], :hover, :active, :focus) {
   --color: var(--secondary-hover);
 }
-a:not(#github-corner).secondary:focus,
+a.secondary:focus,
 [role=link].secondary:focus {
   --background-color: var(--secondary-focus);
 }
-a:not(#github-corner).contrast,
+a.contrast,
 [role=link].contrast {
   --color: var(--contrast);
 }
-a:not(#github-corner).contrast:is([aria-current], :hover, :active, :focus),
+a.contrast:is([aria-current], :hover, :active, :focus),
 [role=link].contrast:is([aria-current], :hover, :active, :focus) {
   --color: var(--contrast-hover);
 }
-a:not(#github-corner).contrast:focus,
+a.contrast:focus,
 [role=link].contrast:focus {
   --background-color: var(--contrast-focus);
 }
@@ -2682,6 +2679,9 @@ textarea,
     grid-column-gap: 0;
   }
 }
+main > section.grid > nav a {
+  text-decoration: none !important;
+}
 main > section.grid > nav > ul {
   display: none;
 }
@@ -2796,6 +2796,10 @@ article img.figure {
     max-height: 12em;
     width: 100%;
   }
+}
+
+a {
+  text-decoration: underline !important;
 }
 
 /*# sourceMappingURL=main.css.map */
