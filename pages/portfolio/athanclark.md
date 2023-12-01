@@ -1,7 +1,7 @@
 ---
 title: athanclark.com
 title-suffix: Portfolio
-keywords: [Static Site Generator, Bash, Sed, Pandoc, Nix]
+keywords: [Static Site Generator, Bash, Sed, Pandoc, Nix, GitHub Pages, CI/CD]
 date: 2023-11-09 -- present
 website: https://github.com/athanclark/athanclark.github.io
 abstract-title: Summary

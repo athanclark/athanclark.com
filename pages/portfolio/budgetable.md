@@ -2,7 +2,7 @@
 title: Budgetable
 title-suffix: Portfolio
 date: 2022-06-21 -- 2022-10-27
-keywords: [Finance, Auth0, Stripe, WebAssembly, Haskell, Rust]
+keywords: [Finance, Auth0, Stripe, WebAssembly, Haskell, Rust, Docker]
 website: https://budgetable.net
 abstract-title: Summary
 abstract:
