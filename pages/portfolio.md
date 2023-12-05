@@ -47,3 +47,12 @@ Here are some libraries I've developed.
 - [Shpadoinkle](/portfolio/shpadoinkle.html)
   <br />
   A web application framework for Haskell and GHCJS.
+
+Toy Projects
+---------------
+
+These are some projects I developed without much seriousness in mind.
+
+- [Weather Checker](/portfolio/weather-checker.html)
+  <br />
+  A simple location-based weather information application with 3d effects.
