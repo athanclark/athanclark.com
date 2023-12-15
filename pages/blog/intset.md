@@ -34,7 +34,7 @@ look to a tree-like structure like a
 These are easy solutions, and doesn't require much thought, but the performance of these structures
 matters when dealing with high throughput (either data or operations). Arrays grant $O(1)$
 insertion, but harbor $O(n)$ for search and deletion. A red-black tree will grant
-$O(log n)$ for all three operations in the worst case, but we can do better.
+$O(log\enspace n)$ for all three operations in the worst case, but we can do better.
 
 This blog post is an account of my development experience for this library, and a slight technical
 interlude on how it works. The audiance reading this should be familiar with basic
